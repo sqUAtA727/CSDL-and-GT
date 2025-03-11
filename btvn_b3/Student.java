@@ -24,7 +24,7 @@ public class Student implements Comparable {
     @Override
     public int compareTo(Object o) {
         if (Objects.equals(this.fullName, ((Student) o).fullName)){
-            return Integer.compare(this.age, ((Student) o).age);
+            return Integer.compare(((Student) o).age, this.age);
         } else {
             return this.fullName.compareTo(((Student)o).fullName);
         }
